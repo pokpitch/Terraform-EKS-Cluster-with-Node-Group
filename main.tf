@@ -56,7 +56,7 @@ resource "aws_eks_addon" "addons" {
   cluster_name      = aws_eks_cluster.eks-cluster.id
   addon_name        = each.value.name
   addon_version     = each.value.version
-  resolve_conflicts = "OVERWRITE"
+  resolve_conflicts_on_create = "OVERWRITE"
 }
 
 resource "aws_iam_openid_connect_provider" "default" {

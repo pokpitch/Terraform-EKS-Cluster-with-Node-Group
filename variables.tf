@@ -10,9 +10,9 @@ variable "networking" {
   })
   default = {
     cidr_block      = "141.0.0.0/16"
-    region          = "eu-central-1"
+    region          = "ap-southeast-2"
     vpc_name        = "terraform-vpc"
-    azs             = ["eu-central-1a", "eu-central-1b"]
+    azs             = ["ap-southeast-2a", "ap-southeast-2b"]
     public_subnets  = ["141.0.1.0/24", "141.0.2.0/24"]
     private_subnets = ["141.0.3.0/24", "141.0.4.0/24"]
     nat_gateways    = true
@@ -81,7 +81,7 @@ variable "cluster_config" {
   })
   default = {
     name    = "eks-cluster"
-    version = "1.22"
+    version = "1.30"
   }
 }
 
@@ -144,19 +144,19 @@ variable "addons" {
   default = [
     {
       name    = "kube-proxy"
-      version = "v1.22.6-eksbuild.1"
+      version = "v1.30.0-eksbuild.3"
     },
     {
       name    = "vpc-cni"
-      version = "v1.11.0-eksbuild.1"
+      version = "v1.18.2-eksbuild.1"
     },
     {
       name    = "coredns"
-      version = "v1.8.7-eksbuild.1"
+      version = "v1.11.1-eksbuild.9"
     },
     {
       name    = "aws-ebs-csi-driver"
-      version = "v1.6.2-eksbuild.0"
+      version = "v1.31.0-eksbuild.1"
     }
   ]
 }
