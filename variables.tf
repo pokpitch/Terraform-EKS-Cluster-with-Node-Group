@@ -117,7 +117,7 @@ variable "node_groups" {
         max_unavailable = 1
       }
     },
-    /*{
+    {
       name           = "t3-micro-spot"
       instance_types = ["t3.micro"]
       ami_type       = "AL2_x86_64"
@@ -131,7 +131,7 @@ variable "node_groups" {
       update_config = {
         max_unavailable = 1
       }
-    },*/
+    },
   ]
 
 }
